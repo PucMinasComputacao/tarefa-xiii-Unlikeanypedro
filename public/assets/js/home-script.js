@@ -1,82 +1,21 @@
-
-// ── SHARED ARTWORKS DATA ─────────────────────────────────────────────────────
-const artworks = [
-  {
-    "id": 1,
-    "title": "Starry Night",
-    "artist": "Vincent van Gogh",
-    "year": 1889,
-    "category": "Post-Impressionism",
-    "medium": "Oil on canvas",
-    "description": "Uma obra-prima noturna que captura a essência da natureza em movimento.",
-    "thumbnail": "https://picsum.photos/id/25/300/300",
-    "image": "https://picsum.photos/id/25/800/600",
-    "tags": ["impressionismo", "noite", "céu"]
-  },
-  {
-    "id": 2,
-    "title": "The Persistence of Memory",
-    "artist": "Salvador Dalí",
-    "year": 1931,
-    "category": "Surrealism",
-    "medium": "Oil on canvas",
-    "description": "Uma exploração surrealista do tempo e da memória com relógios derretidos.",
-    "thumbnail": "https://picsum.photos/id/27/300/300",
-    "image": "https://picsum.photos/id/27/800/600",
-    "tags": ["surrealismo", "tempo", "abstrato"]
-  },
-  {
-    "id": 3,
-    "title": "Girl with a Pearl Earring",
-    "artist": "Johannes Vermeer",
-    "year": 1665,
-    "category": "Dutch Golden Age",
-    "medium": "Oil on canvas",
-    "description": "Um retrato clássico famoso pela pérola brilhante e o olhar misterioso.",
-    "thumbnail": "https://picsum.photos/id/28/300/300",
-    "image": "https://picsum.photos/id/28/800/600",
-    "tags": ["retrato", "clássico", "pérola"]
-  },
-  {
-    "id": 4,
-    "title": "The Great Wave",
-    "artist": "Katsushika Hokusai",
-    "year": 1831,
-    "category": "Ukiyo-e",
-    "medium": "Woodblock print",
-    "description": "Uma icônica representação da Grande Onda de Kanagawa com o Monte Fuji ao fundo.",
-    "thumbnail": "https://picsum.photos/id/29/300/300",
-    "image": "https://picsum.photos/id/29/800/600",
-    "tags": ["japonês", "onda", "natureza"]
-  },
-  {
-    "id": 5,
-    "title": "American Gothic",
-    "artist": "Grant Wood",
-    "year": 1930,
-    "category": "American Regionalism",
-    "medium": "Oil on beaverboard",
-    "description": "Uma pintura que captura o espírito do rural americano com uma abordagem única.",
-    "thumbnail": "https://picsum.photos/id/30/300/300",
-    "image": "https://picsum.photos/id/30/800/600",
-    "tags": ["americano", "rural", "expressão"]
-  },
-  {
-    "id": 6,
-    "title": "The Raft of the Medusa",
-    "artist": "Théodore Géricault",
-    "year": 1819,
-    "category": "Romanticism",
-    "medium": "Oil on canvas",
-    "description": "Uma obra dramática que retrata sobreviventes em um navio à deriva no oceano.",
-    "thumbnail": "https://picsum.photos/id/31/300/300",
-    "image": "https://picsum.photos/id/31/800/600",
-    "tags": ["drama", "mar", "humano"]
+// ── FETCH ARTWORKS FROM JSON SERVER ──────────────────────────────────────────
+async function fetchItems() {
+  try {
+    const response = await fetch("http://localhost:3000/artworks");
+    if (!response.ok) throw new Error("Erro ao buscar dados");
+    return await response.json();
+  } catch (error) {
+    console.error("Erro:", error);
+    const container = document.getElementById("artworks-grid");
+    if (container) {
+      container.innerHTML = '<p>Erro ao carregar obras. Verifique se o JSON Server está rodando.</p>';
+    }
+    return [];
   }
-];
+}
 
 // ── HOME PAGE: render artwork cards ──────────────────────────────────────────
-function renderCards() {
+function renderCards(artworks) {
   const container = document.getElementById("artworks-grid");
   if (!container) return;
 
@@ -123,7 +62,10 @@ function initNavToggle() {
 }
 
 // ── INIT: HOME PAGE ONLY ──────────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", () => {
+async function init() {
   initNavToggle();
-  renderCards();
-});
+  const artworks = await fetchItems();
+  renderCards(artworks);
+}
+
+document.addEventListener("DOMContentLoaded", init);

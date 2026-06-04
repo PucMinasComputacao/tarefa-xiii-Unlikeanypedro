@@ -1,0 +1,310 @@
+{
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Starry Night",
+      "artist": "Vincent van Gogh",
+      "year": 1889,
+      "category": "Post-Impressionism",
+      "medium": "Oil on canvas",
+      "description": "Uma obra-prima noturna que captura a essência da natureza em movimento.",
+      "descricaoCompleta": "A Noite Estrelada é uma obra-prima de Vincent van Gogh que retrata um céu noturno dinâmico e vibrante com estrelas brilhantes e uma lua luminosa. A técnica de pinceladas contorcidas cria um efeito de movimento no céu, enquanto a aldeia dorme abaixo. Esta pintura é uma das mais reconhecidas do mundo e exemplifica a genialidade expressionista de van Gogh.",
+      "thumbnail": "https://picsum.photos/id/25/300/300",
+      "image": "https://picsum.photos/id/25/800/600",
+      "tags": ["impressionismo", "noite", "céu"],
+      "destaque": true,
+      "preco": 500000
+    },
+    {
+      "id": 2,
+      "title": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "year": 1931,
+      "category": "Surrealism",
+      "medium": "Oil on canvas",
+      "description": "Uma exploração surrealista do tempo e da memória com relógios derretidos.",
+      "descricaoCompleta": "The Persistence of Memory é uma obra magistral do surrealismo que apresenta relógios moles derretendo sobre uma paisagem árida. Dalí explora conceitos filosóficos sobre o tempo, a memória e a passagem dos anos através de símbolos abstratos e perturbadores. A composição irreal desafia a percepção e a compreensão do espectador.",
+      "thumbnail": "https://picsum.photos/id/27/300/300",
+      "image": "https://picsum.photos/id/27/800/600",
+      "tags": ["surrealismo", "tempo", "abstrato"],
+      "destaque": true,
+      "preco": 450000
+    },
+    {
+      "id": 3,
+      "title": "Girl with a Pearl Earring",
+      "artist": "Johannes Vermeer",
+      "year": 1665,
+      "category": "Dutch Golden Age",
+      "medium": "Oil on canvas",
+      "description": "Um retrato clássico famoso pela pérola brilhante e o olhar misterioso.",
+      "descricaoCompleta": "Girl with a Pearl Earring é considerada a Mona Lisa do Norte. A obra de Vermeer exibe um jovem com um turbante exótico e uma pérola pendente que capta a luz de forma hipnotizante. O rosto e o olhar enigmático da garota criaram um misério que intriga espectadores há séculos.",
+      "thumbnail": "https://picsum.photos/id/28/300/300",
+      "image": "https://picsum.photos/id/28/800/600",
+      "tags": ["retrato", "clássico", "pérola"],
+      "destaque": true,
+      "preco": 350000
+    },
+    {
+      "id": 4,
+      "title": "The Great Wave",
+      "artist": "Katsushika Hokusai",
+      "year": 1831,
+      "category": "Ukiyo-e",
+      "medium": "Woodblock print",
+      "description": "Uma icônica representação da Grande Onda de Kanagawa com o Monte Fuji ao fundo.",
+      "descricaoCompleta": "A Grande Onda é uma das obras mais famosas da arte japonesa. Esta estampa de xilogravura retrata uma onda massiva e dinâmica que parece engolir pequenos barcos de pesca, enquanto o Monte Fuji permanece pequeno ao fundo. A perspectiva única e a técnica de impressão criam um efeito impressionante.",
+      "thumbnail": "https://picsum.photos/id/29/300/300",
+      "image": "https://picsum.photos/id/29/800/600",
+      "tags": ["japonês", "onda", "natureza"],
+      "destaque": true,
+      "preco": 120000
+    },
+    {
+      "id": 5,
+      "title": "American Gothic",
+      "artist": "Grant Wood",
+      "year": 1930,
+      "category": "American Regionalism",
+      "medium": "Oil on beaverboard",
+      "description": "Uma pintura que captura o espírito do rural americano com uma abordagem única.",
+      "descricaoCompleta": "American Gothic é um ícone da cultura americana, retratando uma casal rural em pé diante de sua casa. A expressão séria dos personagens e a janela em estilo gótico criam uma atmosfera de tensão silenciosa. A obra se tornou símbolo da vida rural americana.",
+      "thumbnail": "https://picsum.photos/id/30/300/300",
+      "image": "https://picsum.photos/id/30/800/600",
+      "tags": ["americano", "rural", "expressão"],
+      "destaque": false,
+      "preco": 280000
+    },
+    {
+      "id": 6,
+      "title": "The Raft of the Medusa",
+      "artist": "Théodore Géricault",
+      "year": 1819,
+      "category": "Romanticism",
+      "medium": "Oil on canvas",
+      "description": "Uma obra dramática que retrata sobreviventes em um navio à deriva no oceano.",
+      "descricaoCompleta": "The Raft of the Medusa é uma obra monumental do Romantismo que narra o naufrágio do navio Medusa. Géricault retrata com intensa dramaticidade os últimos momentos dos sobreviventes em uma jangada à deriva. A pintura combina técnica clássica com emoção crua e poder expressivo.",
+      "thumbnail": "https://picsum.photos/id/31/300/300",
+      "image": "https://picsum.photos/id/31/800/600",
+      "tags": ["drama", "mar", "humano"],
+      "destaque": false,
+      "preco": 620000
+    },
+    {
+      "id": 7,
+      "title": "The Birth of Venus",
+      "artist": "Sandro Botticelli",
+      "year": 1485,
+      "category": "Renaissance",
+      "medium": "Oil on canvas",
+      "description": "Uma representação delicada da deusa do amor emergindo do mar.",
+      "descricaoCompleta": "O Nascimento de Vênus é uma das obras-primas da Renascença que retrata a deusa da beleza e do amor emergindo do mar em uma concha. Botticelli cria uma cena etérea e graciosa, com figuras aladas e ninfas. A composição harmoniosa e as linhas fluidas celebram a beleza clássica.",
+      "thumbnail": "https://picsum.photos/id/32/300/300",
+      "image": "https://picsum.photos/id/32/800/600",
+      "tags": ["mitologia", "beleza", "clássico"],
+      "destaque": true,
+      "preco": 580000
+    },
+    {
+      "id": 8,
+      "title": "Nighthawks",
+      "artist": "Edward Hopper",
+      "year": 1942,
+      "category": "American Realism",
+      "medium": "Oil on canvas",
+      "description": "Uma cena noturna de solidão urbana em um diner americano.",
+      "descricaoCompleta": "Nighthawks é uma obra que captura a essência da solidão urbana moderna. Hopper retrata um diner vazio com poucos clientes, iluminado pela luz fluorescente durante a noite. A composição cria uma atmosfera de isolamento e melancolia que ressoa com muitos espectadores.",
+      "thumbnail": "https://picsum.photos/id/33/300/300",
+      "image": "https://picsum.photos/id/33/800/600",
+      "tags": ["moderno", "cidade", "solidão"],
+      "destaque": false,
+      "preco": 420000
+    },
+    {
+      "id": 9,
+      "title": "The Son of Man",
+      "artist": "René Magritte",
+      "year": 1964,
+      "category": "Surrealism",
+      "medium": "Oil on canvas",
+      "description": "Um homem com um chapéu-coco cujo rosto é obscurecido por uma maçã verde.",
+      "descricaoCompleta": "O Filho do Homem é um ícone do surrealismo que apresenta um homem bem vestido com um chapéu-coco, mas cujo rosto está completamente obscurecido por uma maçã verde flutuante. A obra joga com conceitos de identidade, visibilidade e o oculto, criando um mistério visual intrigante.",
+      "thumbnail": "https://picsum.photos/id/34/300/300",
+      "image": "https://picsum.photos/id/34/800/600",
+      "tags": ["surrealismo", "identidade", "mistério"],
+      "destaque": false,
+      "preco": 390000
+    },
+    {
+      "id": 10,
+      "title": "Washington Crossing the Delaware",
+      "artist": "Emanuel Gottlieb Leutze",
+      "year": 1851,
+      "category": "Historical",
+      "medium": "Oil on canvas",
+      "description": "Uma cena épica da travessia histórica do rio Delaware durante a Revolução Americana.",
+      "descricaoCompleta": "Washington Crossing the Delaware é uma obra histórica que retrata o momento crucial em que George Washington e suas tropas atravessam o rio Delaware em 1776. A composição dramática com figuras em movimento e a iluminação heroica criam um senso de importância histórica e bravura.",
+      "thumbnail": "https://picsum.photos/id/35/300/300",
+      "image": "https://picsum.photos/id/35/800/600",
+      "tags": ["história", "América", "estratégia"],
+      "destaque": true,
+      "preco": 510000
+    },
+    {
+      "id": 11,
+      "title": "Christina's World",
+      "artist": "Andrew Wyeth",
+      "year": 1948,
+      "category": "American Realism",
+      "medium": "Tempera on panel",
+      "description": "Uma mulher arrastando-se através de um campo em direção a uma casa distante.",
+      "descricaoCompleta": "Christina's World é uma obra comovente que retrata uma mulher deficiente rastejando através de um campo de trigo seco em direção a uma casa de madeira antiga ao longe. A pintura explora temas de perseverança, solidão e determinação humana de forma profundamente tocante.",
+      "thumbnail": "https://picsum.photos/id/36/300/300",
+      "image": "https://picsum.photos/id/36/800/600",
+      "tags": ["realismo", "natureza", "humanidade"],
+      "destaque": false,
+      "preco": 480000
+    },
+    {
+      "id": 12,
+      "title": "The Death of Marat",
+      "artist": "Jacques-Louis David",
+      "year": 1793,
+      "category": "Neoclassicism",
+      "medium": "Oil on canvas",
+      "description": "Uma representação dramática da morte do revolucionário francês Jean-Paul Marat.",
+      "descricaoCompleta": "A Morte de Marat é uma obra neoclássica que retrata o momento em que o revolucionário Marat é assassinado em seu banho. David cria uma composição heroica que transforma um crime político em uma cena de martírio. A obra é uma poderosa declaração política e artística.",
+      "thumbnail": "https://picsum.photos/id/37/300/300",
+      "image": "https://picsum.photos/id/37/800/600",
+      "tags": ["revolução", "política", "drama"],
+      "destaque": false,
+      "preco": 650000
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Post-Impressionism",
+      "descricao": "Movimento artístico do final do século XIX que evoluiu do Impressionismo"
+    },
+    {
+      "id": 2,
+      "nome": "Surrealism",
+      "descricao": "Movimento artístico que valoriza o irracional e o inconsciente"
+    },
+    {
+      "id": 3,
+      "nome": "Dutch Golden Age",
+      "descricao": "Período de grande prosperidade e desenvolvimento artístico nos Países Baixos"
+    },
+    {
+      "id": 4,
+      "nome": "Ukiyo-e",
+      "descricao": "Gênero de xilogravura japonesa que retrata o mundo flutuante"
+    },
+    {
+      "id": 5,
+      "nome": "American Regionalism",
+      "descricao": "Movimento artístico americano focado em cenas rurais e regionais"
+    },
+    {
+      "id": 6,
+      "nome": "Romanticism",
+      "descricao": "Movimento que enfatiza emoção, imaginação e individualismoña"
+    },
+    {
+      "id": 7,
+      "nome": "Renaissance",
+      "descricao": "Período de renascimento cultural e artístico na Europa"
+    },
+    {
+      "id": 8,
+      "nome": "American Realism",
+      "descricao": "Movimento artístico americano focado na representação realista da vida contemporânea"
+    },
+    {
+      "id": 9,
+      "nome": "Historical",
+      "descricao": "Obras que retratam eventos históricos significantes"
+    },
+    {
+      "id": 10,
+      "nome": "Neoclassicism",
+      "descricao": "Movimento que busca reviver os ideais da arte clássica greco-romana"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": 1,
+      "artworkId": 1,
+      "nota": 4.8,
+      "totalAvaliacoes": 245
+    },
+    {
+      "id": 2,
+      "artworkId": 2,
+      "nota": 4.7,
+      "totalAvaliacoes": 189
+    },
+    {
+      "id": 3,
+      "artworkId": 3,
+      "nota": 4.9,
+      "totalAvaliacoes": 312
+    },
+    {
+      "id": 4,
+      "artworkId": 4,
+      "nota": 4.8,
+      "totalAvaliacoes": 278
+    },
+    {
+      "id": 5,
+      "artworkId": 5,
+      "nota": 4.6,
+      "totalAvaliacoes": 156
+    },
+    {
+      "id": 6,
+      "artworkId": 6,
+      "nota": 4.7,
+      "totalAvaliacoes": 201
+    },
+    {
+      "id": 7,
+      "artworkId": 7,
+      "nota": 4.9,
+      "totalAvaliacoes": 298
+    },
+    {
+      "id": 8,
+      "artworkId": 8,
+      "nota": 4.7,
+      "totalAvaliacoes": 223
+    },
+    {
+      "id": 9,
+      "artworkId": 9,
+      "nota": 4.6,
+      "totalAvaliacoes": 167
+    },
+    {
+      "id": 10,
+      "artworkId": 10,
+      "nota": 4.8,
+      "totalAvaliacoes": 289
+    },
+    {
+      "id": 11,
+      "artworkId": 11,
+      "nota": 4.7,
+      "totalAvaliacoes": 198
+    },
+    {
+      "id": 12,
+      "artworkId": 12,
+      "nota": 4.8,
+      "totalAvaliacoes": 256
+    }
+  ]
+}
