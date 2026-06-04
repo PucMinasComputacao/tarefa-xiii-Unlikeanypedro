@@ -1,0 +1,184 @@
+/* ── DETAILS PAGE ── */
+
+.details-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+}
+
+.details-back {
+    margin-bottom: 32px;
+}
+
+.back-link {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+    animation: fadeUp 0.7s ease both;
+}
+
+/* Image column */
+.details-image-frame {
+    position: relative;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.details-image-frame::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 1px solid var(--gold);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.details-image-frame img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: transform 0.6s ease;
+}
+
+.details-image-frame:hover img {
+    transform: scale(1.03);
+}
+
+.details-badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 6px 16px;
+    font-family: var(--body-font);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Info column */
+.details-category {
+    display: block;
+    font-family: var(--body-font);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.details-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.details-artist {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+
+.details-description {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 32px;
+}
+
+.details-meta {
+    border-top: 1px solid rgba(26, 22, 18, 0.12);
+    border-bottom: 1px solid rgba(26, 22, 18, 0.12);
+    padding: 20px 0;
+    margin-bottom: 28px;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-family: var(--body-font);
+    font-size: 0.88rem;
+}
+
+.meta-row dt {
+    color: rgba(44, 36, 24, 0.55);
+    letter-spacing: 0.04em;
+    font-weight: normal;
+}
+
+.meta-row dd {
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+}
+
+.details-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+}
+
+.details-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 28px;
+}
+
+.details-not-found {
+    text-align: center;
+    padding: 80px 20px;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    color: rgba(44, 36, 24, 0.55);
+}
+
+.details-not-found .btn {
+    margin-top: 24px;
+}
+
+/* ── SHARED: tag pill ── */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: var(--body-font);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(184, 148, 63, 0.1);
+    color: var(--gold);
+    border: 1px solid rgba(184, 148, 63, 0.25);
+}
+
+@media (max-width: 768px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .details-container {
+        padding: 32px 20px 60px;
+    }
+}

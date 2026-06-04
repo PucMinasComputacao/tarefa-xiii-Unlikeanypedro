@@ -1,0 +1,519 @@
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --cream: #f5f0e8;
+    --dark: #1a1612;
+    --accent: #c8490a;
+    --gold: #b8943f;
+    --stripe-red: #c0392b;
+    --stripe-orange: #e67e22;
+    --stripe-yellow: #f1c40f;
+    --stripe-green: #27ae60;
+    --stripe-teal: #16a085;
+    --text-body: #2c2418;
+    --serif: 'Playfair Display', Georgia, serif;
+    --body-font: 'Lora', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--body-font);
+    background: var(--cream);
+    color: var(--text-body);
+    overflow-x: hidden;
+}
+
+/* ── COLOR STRIPES (left side) ── */
+.stripes {
+    position: fixed;
+    top: 0; left: 0;
+    width: 14px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background: linear-gradient(var(--stripe-red),var(--stripe-orange),var(--stripe-yellow),var(--stripe-green),var(--stripe-teal))
+}
+
+
+/* ── NAV ── */
+nav {
+    position: sticky;
+    height: 1rem;
+    top: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 18px 40px 18px 28px;
+    background: rgba(245, 240, 232, 0.92);
+}
+
+.nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+    padding-left: 14px;
+    text-decoration: none;
+}
+
+.links-nav {
+    display: flex;
+    margin: 0;
+    gap: 32px;
+    list-style: none;
+}
+
+.links-nav a {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+}
+.links-nav a:hover { color: var(--accent); }
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--dark);
+    transition: all 0.3s;
+}
+
+/* ── HERO ── */
+.hero {
+    margin-top: 10px;
+    position: relative;
+    height: 280px;
+    min-height: 280px;
+    max-height: 280px;
+    overflow: hidden;
+    margin-left: 7px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') center/cover no-repeat;
+    filter: brightness(0.72) saturate(1.1);
+    transform: scale(1.03);
+    animation: slowZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+    from { transform: scale(1.03); }
+    to   { transform: scale(1.08); }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20,14,8,0.55) 0%, rgba(20,14,8,0.1) 60%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    max-width: 620px;
+}
+
+.hero-content h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s ease both;
+}
+
+.hero-content p {
+    font-family: var(--body-font);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #a83a06;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200,73,10,0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.6);
+}
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+}
+
+/* ── CAPTIONS ── */
+
+.with-captions {
+    padding: 3.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselExampleCaptions {
+    max-width: 700px;
+    width: 100%;
+}
+
+.carousel-inner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-inner a {
+    filter: brightness(0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    height: 100%;
+}
+
+.carousel-inner a:hover{
+    transform: scale(0.98);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ── SECTION: CARD ── */
+
+.card-group{
+    columns: 300px;
+}
+
+/* ── ARTWORKS GRID SECTION ── */
+
+.section-artworks {
+    padding: 72px 40px 80px;
+    margin-left: 7px;
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    border-bottom: 1px solid rgba(26, 22, 18, 0.1);
+    padding-bottom: 20px;
+}
+
+.section-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 900;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+}
+
+.section-header span {
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(44, 36, 24, 0.45);
+}
+
+#artworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* ── ARTWORK CARD ── */
+
+.artwork-card {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-image-wrap {
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+    aspect-ratio: 4/3;
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.4s ease;
+    filter: brightness(0.92) saturate(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 22, 18, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-cta {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.card-link:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-link:hover .card-image-wrap img {
+    transform: scale(1.06);
+}
+
+.card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 4px 12px;
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.badge-available {
+    background: rgba(39, 174, 96, 0.9);
+    color: #fff;
+}
+
+.badge-sold {
+    background: rgba(26, 22, 18, 0.75);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.card-info {
+    padding: 20px 0 0;
+}
+
+.card-category {
+    display: block;
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+
+.card-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+    line-height: 1.2;
+    transition: color 0.2s;
+}
+
+.card-link:hover .card-title {
+    color: var(--accent);
+}
+
+.card-artist {
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgba(44, 36, 24, 0.55);
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(44, 36, 24, 0.7);
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    font-family: var(--body-font);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(184, 148, 63, 0.1);
+    color: var(--gold);
+    border: 1px solid rgba(184, 148, 63, 0.25);
+}
+
+@media (max-width: 768px) {
+    .section-artworks {
+    padding: 48px 20px 60px;
+    }
+
+    #artworks-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    }
+}
+
+/* ── FOOTER ── */
+footer {
+    margin-left: 7px;
+    background: var(--dark);
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    nav { padding: 14px 20px 14px 20px; }
+
+    .links-nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .links-nav.open { display: flex; }
+    .links-nav li a {
+    display: block;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 1rem;
+    }
+
+    .nav-toggle { display: flex; }
+
+    .hero-content {
+    padding: 0 28px;
+    max-width: 100%;
+    }
+
+    .section-obras {
+    padding: 56px 20px 40px;
+    }
+
+    .obra-card {
+    grid-template-columns: 1fr;
+    }
+
+    .obra-card.reverse {
+    direction: ltr;
+    }
+
+    .obra-image {
+    min-height: 240px;
+    order: -1;
+    }
+
+    .obra-text {
+    padding: 28px 24px;
+    }
+
+    .with-captions {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 2rem; }
+    .btn { padding: 10px 20px; font-size: 0.8rem; }
+}
