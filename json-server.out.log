@@ -1,0 +1,21 @@
+
+> artfinder@1.0.0 start
+> json-server --watch db/db.json --port 3000
+
+
+  \{^_^}/ hi!
+
+  Loading db/db.json
+  Done
+
+  Resources
+  http://localhost:3000/usuarios
+  http://localhost:3000/favoritos
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+[0mGET /usuarios [32m200[0m 27.828 ms - 306[0m

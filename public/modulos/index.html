@@ -11,115 +11,84 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet" />
-
 </head>
 
 <body>
-
-  <!-- Stripes -->
   <div class="stripes" aria-hidden="true">
     <span></span><span></span><span></span><span></span><span></span>
   </div>
 
-  <!-- Nav -->
   <nav>
     <a class="nav-logo" href="index.html">Artfinder</a>
-    <ul class="links-nav" id="Links-nav">
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="#">Download</a></li>
-    </ul>
+    <ul class="links-nav" id="Links-nav"></ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>A bold headline<br>that delivers</h1>
-      <p>Go ahead and say just a little<br>more about what you do</p>
+      <h1>Artfinder</h1>
+      <p>Explore obras marcantes, artistas e movimentos em uma galeria digital.</p>
       <div class="hero-buttons">
-        <a href="../modulos/gallery/gallery.html" class="btn btn-primary">Ir pra galeria</a>
-        <a href="#artworks" class="btn btn-secondary">explorar</a>
+        <a href="../modulos/gallery/gallery.html" class="btn btn-primary">Ir para a galeria</a>
+        <a href="#artworks" class="btn btn-secondary">Explorar</a>
       </div>
     </div>
   </section>
 
-  <!-- With Captions -->
   <div class="with-captions">
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <a href="/public/modulos/gallery/gallery.html">
-            <img src="../assets/Images/art-painting-285919_1280.jpg" class="d-block w-100" alt="Art Painting">
-          </a>
-
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Descubra</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <a href="/public/modulos/gallery/gallery.html">
-            <img src="../assets/Images/art-school-of-athens-1143741_1280.jpg" class="d-block w-100" alt="School of Athens">
-          </a>
-
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Descubra</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <a href="/public/modulos/gallery/gallery.html">
-            <img src="../assets/Images/lastsupp_1e0dc2be-c3b3-44e2-ab5b-b4836adf0faf.jpg" class="d-block w-100" alt="Last Supper">
-          </a>
-
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Descubra</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
+    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators" id="featured-indicators"></div>
+      <div class="carousel-inner" id="featured-carousel"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">Anterior</span>
       </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden">Proximo</span>
       </button>
     </div>
   </div>
 
-
-  <!-- Obras -->
-  <!-- Artworks Grid (dynamic) -->
   <section class="section-artworks" id="artworks">
     <div class="section-header">
-      <h2>Obras em destaque</h2>
-      <span>Coleção 2020 – 2024</span>
+      <h2>Obras</h2>
+      <span>Colecao do JSON Server</span>
     </div>
-    <div id="artworks-grid">
-      <!-- Cards rendered by app.js -->
+    <form class="search-bar" id="search-form">
+      <input type="search" id="search-input" placeholder="Pesquisar por titulo ou descricao" aria-label="Pesquisar obras">
+      <button class="btn btn-primary" type="submit">Pesquisar</button>
+      <button class="btn btn-secondary" type="button" id="clear-search">Limpar</button>
+    </form>
+    <div id="artworks-grid"></div>
+  </section>
+
+  <section class="section-advanced" id="visualizacao">
+    <div class="section-header">
+      <h2>Movimentos</h2>
+      <span>Grafico por categoria</span>
+    </div>
+    <div class="chart-panel" id="category-chart"></div>
+  </section>
+
+  <section class="author-section" id="autor">
+    <div class="section-header">
+      <h2>Autor</h2>
+      <span>Informacoes do aluno</span>
+    </div>
+    <div class="author-profile">
+      <img src="https://picsum.photos/id/1005/180/180" alt="Foto de Pedro">
+      <div>
+        <h3>Pedro</h3>
+        <p>Aluno do curso de Sistemas de Informacao da PUC Minas. Projeto desenvolvido para a disciplina Desenvolvimento de Interfaces Web.</p>
+        <p><strong>Curso:</strong> Engenharia de Software</p>
+        <p><strong>Turma:</strong> DIW</p>
+        <p><strong>Redes:</strong> GitHub / LinkedIn</p>
+      </div>
     </div>
   </section>
 
@@ -130,6 +99,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/met-api.js"></script>
   <script src="../assets/js/home-script.js"></script>
 </body>
 

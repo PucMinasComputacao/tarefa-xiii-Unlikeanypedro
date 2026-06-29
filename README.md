@@ -1,7 +1,7 @@
 # Artfinder - Migração para JSON Server
 
-**Aluno:** Pedro OLiveira
-**Matrícula:** 927 165
+**Aluno:** Pedro  
+**Matrícula:** [Seu número de matrícula aqui]
 
 ## Descrição do Projeto
 
@@ -11,7 +11,7 @@ Artfinder é um aplicativo web que apresenta uma galeria de obras de arte. Nesta
 
 ```
 tarefa-xiii-Unlikeanypedro/
-├── db.json                          # Base de dados JSON
+├── db.json                          # Base de dados JSONpnm
 ├── public/
 │   ├── modulos/
 │   │   ├── index.html               # Página principal (Home)
